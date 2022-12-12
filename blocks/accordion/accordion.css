@@ -11,6 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    font-size: 22px;
 }
 
 .accordion .item-title:after {
@@ -24,14 +26,6 @@
     content: '';
 }
 
-.accordion .item-title.open {
-    background: #dddddd;
-}
-
-.accordion .item-title.open::after {
-    transform: rotate(-135deg) translateX(50%);
-}
-
 .accordion .item-content {
     display: none;
     grid-template-columns: 1fr 1fr;
@@ -40,6 +34,14 @@
     border-bottom: 1px solid #dddddd;
 }
 
+.accordion .item-title.open {
+    background: #dddddd;
+}
+
+.accordion .item-title.open::after {
+    transform: rotate(-135deg) translateX(50%);
+}
+
 .accordion .item-title.open + .item-content {
     display: grid;
-}
+} 
